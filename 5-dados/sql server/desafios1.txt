@@ -1,0 +1,22 @@
+SELECT COUNT(*)
+FROM Production.Product  a
+WHERE a.ListPrice > 1500;
+
+select count(*)
+from Person.Person a
+where a.LastName like 'p%'
+
+select count(distinct(city))
+from person.Address
+
+select distinct(city)
+from Person.Address
+
+select count(*)
+from Production.Product a
+where a.color = 'red' 
+and a.ListPrice between 500 and 1000
+
+select count(*)
+from Production.product a
+where a.Name like '%road%'

@@ -1,0 +1,10 @@
+- db.clients.updateOne({name: "vini"}, {$set: {name: "vini alterado"}})
+  - Primeiro argumento é o filtro de pesquisa
+  - Segundo argumento é o que será alterado
+  - Alter o primeiro encontrado
+  - Caso o campo que solicitei a alteração ainda não exista, ele já cria ela
+
+- db.clients.updateMany({}, {$set: {salary: 5000}})
+  - Faz um update em vários documentos
+  - Nesse caso atualizou todos pois não foi passado um filtro
+

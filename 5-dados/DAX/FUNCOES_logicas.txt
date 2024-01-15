@@ -1,0 +1,9 @@
+IF(TESTE, "APROVADO, "REPROVADO")
+AND(TESTE, TESTE)se tudo for verdadeiro retorna true, se algum for falso, retorna false
+IF(AND(TESTE, TESTE), "VERDADEIRO", "FALSO")
+OR(TESTE, TESTE) ce sabe em
+SWITCH(DADO,
+	VALOR1, RESULTADO1,
+	VALOR2, RASULTADO2,
+	"RESULTADO PADRÃO")
+

@@ -1,0 +1,35 @@
+- Toda expressão regular deve ficar entre barras: /regexaqui/
+- A flag "g" no final do regex siginifica que quero pegar todas as ocorrências, se não tiver ela ele pega somente a primeira
+- Por padrão um regex é case insensitive, mas se for passada a flag "i" ele passa a ser case sensitive
+
+- O "." representa qualquer caractere: /./g
+
+- Exemplos:
+  - /t/g retorna todas as ocorrências da letra t
+  - /t./g retorna todas as ocorrência de um t seguindo por um caractere qualquer
+  - /e|é/g retorna todas as ocrrências de e ou é]
+
+- Agrupar:
+  - Grupos são envolvidos por ()
+  - /()/g
+
+- Tudo que é digitado entre colchetes é um caractere, exemplos:
+  - /[0]/g vai localizar todas as ocorrêcias do zero em algum texto
+  - /[02]/g vai localizar todas as ocorrências do zero ou do dois em algum texto
+  - /[0-9]/g todas as ocorrências de qualquer número de zero a nove
+  - /[0][0]/g vai localizar todas as vezez que aparecem dois zeros em sequência no texto
+  - /[0]{2}/g mesma coisa do de cima só que utilizo um multiplicador
+  - /[0-9]{6}/g vai buscar todas as ocorrencias de dígitos de zero a nove até 6 ocorrencias, exemplo:
+    - Se notexto eu tiver uma sequencia 2457637345, ele vai achar ela e pegar do 2 até o 3
+    - se eu tiver a seuqencia 12345, ele não vai achar pois não possui 6 ocorrencias
+  - /[0-9]{6,}/g a virgula significa 6 ou mais
+  - /[0-9]{6,7}/g a virgula significa 6 ou 7 repetições
+  - /[0-9]{6}$/g o cifrão significa o final da linha, ou seja, em uma sequecnia 12345678, ele vai pegar do 3 até o 8
+  - /^[0-9]{6}$/g o ^ siginifica o começo da linha, ou seja, ele só vai achar as linhas que tenham somente 6 dígitos e que obedeçam o padrão
+  - /^[0-9]+$/g com o + indica que será qualquer número de ocorrencias
+  - /^[0-9]*$/g com o * indica que será qualquer número de ocorrencias ou nenhuma
+  - /^[0-9]+[-][a-z]$/g indica que quero achar uma linha que começe com uma sequencia de dígitos, seguida por um "-" seguido por um caractere de a à z
+  - /[0-9]+[-][a-z]/g retirando o começo e o fim da linha, ele encontrá os termos em qualquer parte do texto
+  - /[^t]/g o ^ quando utilizado dentro do colchetes, nega o padrão, ou seja, ele encontrará tudo que não seja um "t"
+  - /([a-z])?/g o ? siginifica que aquele padrão daquele grupo é opcional
+

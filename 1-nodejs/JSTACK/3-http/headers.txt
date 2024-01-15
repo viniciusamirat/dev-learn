@@ -1,0 +1,5 @@
+- São case insensitive 
+
+- Boas práticas para a criação de headers customizados
+  - Iniciar a chave com X:
+    - x_org-ID: value

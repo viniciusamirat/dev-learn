@@ -1,0 +1,7 @@
+- db.clients.deleteOne({name: "vini"})
+  - Delete o primeiro documento que ele encontra com o name vini
+
+- db.clients.deleteMany({name: "vini"})
+  - Deleta todos os documentos que tenha o name vini
+
+  

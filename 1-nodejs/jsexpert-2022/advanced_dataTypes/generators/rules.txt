@@ -1,0 +1,10 @@
+- Um generator é uma função declarada com um "*": function*
+- Dentro dela colocamos o que deve ser executado e em algum lugar podemos usar o comando yield seguido de algo que ele irá retornar
+- quando chamamos essa função, o JS irá executá-la até encontrar o yield e retornar o que ele passa, assim dando um stop na execução dela
+- a chamada da função sempre deve ser assim noemdafuncao.next()
+- Exemplo
+  - Imagine que esse generator é uma função que possui um looping dentro dela e que dentro do looping tem um yield
+  - A cada vez que ele passa pelo looping o yield retorna um número + 1
+  - digamos que o primeiro número seja 1, então quando eu chamar funcao.next() ele vai retornar o 1
+  - na segunda vez que eu chamar funcao.next() o número vai ser 2
+  - o yield sempre retorna um objeto {value: valorretornado, done: true ou false, só será true quando não tiver mais o que retornar}

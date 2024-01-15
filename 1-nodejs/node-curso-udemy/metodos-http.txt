@@ -1,0 +1,5 @@
+get - consultar
+post - cadastrar
+put - alterar todos os registros
+patch - alterar um registro
+delete - excluir registros

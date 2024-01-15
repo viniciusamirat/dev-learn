@@ -1,0 +1,16 @@
+-- Permitir que um container acesse uma pasta local
+
+docker run --name teste-node -it -v "C:/Users/vinic:/usr/src/app" -w "/usr/src/app" node bash -c "npm install && node index"
+  (-v = Indica qual é o caminho do diretório local a ser mapeado)
+  (-w = Indica qual será o diretório que vai espelhar o diretório local)
+  (bash = indica que a seguir, vou poder executar comandos nesse container)
+  (-c = indicar que a seguir virão os comandos a serem executados)
+
+-- Volume nomeado
+docker volume create volume-teste
+
+-- Detalhes do volume criado
+docker volume inspect volume-teste
+
+-- Ao criar um novo container que precisa de volume, só passo o nome do volume que criei e sempre saberei onde está os dados daquele container
+docker run --name teste-node -it -v "volume-teste:/usr/src/app" -w "/usr/src/app" node bash -c "npm install && node index"

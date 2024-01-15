@@ -1,0 +1,31 @@
+npm update -g npm         -- Desta forma eu posso atualizar a versão do NPM
+
+npm init                  --cria o arquivo package.json
+npm init -y
+
+npm install               -- Instala tudo que está no package.json
+
+npm install express       -- Instalando um pacote específico
+
+npm install --save-dev express  -- Instala o pacote como uma dependência de desenvolvimento
+
+npm i express
+
+npm uninstal express      -- Remove o pacote e a dependência
+
+npm i express@4.0.0       -- Instalando o pacote em uma versão específica
+npm i express@^4.0.0      -- Instalando a última versão do pacote dentro da serie 4.x.x
+npm i express@~4.3.0      -- Instalando a última versão do pacote dentro da serie 4.3.x
+
+npm install -g express    -- aqui ele não vai instalar na pasta node-modules, vai ser na pasta appData do usuário
+
+npm update                -- Atualiza todos os pacotes do projeto para as versões mais atuais
+
+npm list                  -- Lista todas as dependências do projeto
+
+npm search express        -- Busca no repositório do npm pacotes que contenham esse termo
+
+npm run start(ou outro termo definido)  -- Executa o script que foi definino do package.json
+
+npm install express multer --save //faz com que seja uma dependência do projeto
+npm install express multer --save-dev //faz com que seja uma dependência de dev

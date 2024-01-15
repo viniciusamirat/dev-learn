@@ -1,0 +1,60 @@
+-------BASICO----------
+docker run --name mysql_container -e MYSQL_ROOT_PASSWORD=root mysql:5.7
+    (-e para passar parametros)
+
+docker ps
+docker ps -a
+
+docker stop mysql_container
+
+docker start msql_container
+
+docker run -it node
+    (-ti é para que ele rode no terminal)
+
+docker restart msql_container
+
+docker rm (id dele ou o nome)
+
+docker pull nomedaimagem
+
+docker images
+
+docker rmi (id dela ou o nome)
+
+docker logs nomedocontainer
+
+docker run --name some-postgres -e POSTGRES_PASSWORD=123 -p 3000:5432 -d postgres
+//-p é a porta, no caso configurei a posta 3000 da minha máquina para se comunicar com a porta 5432 do container
+//o -d é pra rodar em background e não travar o terminal
+
+
+-------MAIS LEGAL----------
+VOLUMES:
+Serve para que um container consiga acessar arquivos da máquina local
+
+docker run --name teste-node -it -v "C:/Users/vinic:/usr/src/app" -w "/usr/src/app" node bash -c "npm install && node index"
+    (depois do -v tenho que passar qual vai ser a pasta local e depois qual a pasta do container, assim tudo que tiver 
+    na pasta do container vai ter na local e vice versa)
+    (-w serve para indicar qual é o diretório de trabalho, assim tudo que for feito será executado nesse diretório de trabalho)
+    (bash serve para executar o binário responsável por executar os comandos que são passados)
+    (-c serve para passar quais comandos serão executados ao criar o container)
+
+docker run --name db-container -d -e MYSQL_ROOT_PASSWORD=123 mysql
+
+docker logs db-container
+docker logs -f db-container
+    (mostra os logs do container, o -f pode ser usado para travar o terminal para que mostre os logf constantemente)
+
+docker exec -it db-container bash
+    (permite executar comandos dentro do container)
+
+--Criando um volume nomeado
+docker colume create volume-teste
+
+--detalhes do volume criado
+docker volume inspect volume-teste
+
+--ao criar um novo container que precisa de volume, só passo o nome do volume que criei e sempre saberei onde está os dados daquele container
+docker run --name teste-node -it -v "volume-teste:/usr/src/app" -w "/usr/src/app" node bash -c "npm install && node index"
+

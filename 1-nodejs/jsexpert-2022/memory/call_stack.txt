@@ -1,0 +1,7 @@
+Pilha de operações onde é armazenada a sequência de ações que um programa vai executar linha por linha
+  -Por exemplo:
+    - um callback que chama outro callback que chama outro callback de forma ordenada
+  - É basicamente uma tabela onde a chave é um endereço de memória e o valor pode ser um tipo primitivo ou 
+  um apontamento para outro endereço de momória
+  - É onde todos os tipos primitivos são armazenados
+  

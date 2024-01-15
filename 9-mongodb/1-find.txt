@@ -1,0 +1,17 @@
+- db.clients.find()
+  - busca todos os dados da collection
+
+- db.clients.find().pretty()
+  - Mesma coisa só que mais bonito (formatado)
+
+- db.clients.find({name: "vini"})
+  - Traz todos os documentos que possuem o campo name igual a vini
+
+- db.clients.find().count()
+  - Traz a quantidade de documentos encontratos
+
+- db.clients.findOne()
+  - Traz apenas o primeiro documento encontrado
+
+- db.explain().find({name: "vini"})
+  - O explain serve para mostrar os dados sobre a consulta

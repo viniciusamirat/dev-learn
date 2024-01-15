@@ -1,0 +1,17 @@
+--NÚMEROS
+SUM()
+MIN()
+MAX()
+AVERAGE()
+
+SUMX(TABELA, COLUNA1 * COLUNA2) multiplica os valores de uma coluna com a outra, pode ser outras operações
+CURRENCY(VENDAS) coloca os valores em moeda
+INT() arredonda para baixo para o número inteiro mais próximo
+CELING(valor, 1) arredonda para cima para o número inteiro mais próximo
+FLOOR(valor, 1) arredonda para baixo para o número inteiro mais próximo
+DIVIDE(esse, por esse) trata casos de divisão por zero
+POWER(VALOR, POTENCIA)
+AVERAGEX(TABELA, VALOR1 + VALOR2) faz a média dos valores e faz uma operação com elas
+COUNT()
+COUNTX(FILTER(TABELA), PRODUTO = "VENTILADOR"), VALOR) conta quantos ventiladores tem
+RANKX(ALL(VENDAS[PRODUTO]), CALCULATE(SUM(VALOR))) faz o ranqueamento de acordo com o valor vendido

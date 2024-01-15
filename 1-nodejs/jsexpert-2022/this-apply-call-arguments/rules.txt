@@ -1,0 +1,20 @@
+--- this ---
+- O this sempre vai referenciar o contexto onde ele está
+- Exemplo
+  - Tenho uma classe com duas funções e a primeira chama a segunda usando o this, ao instanciar um objeto e fazer a chamada da primeira função,
+  funcionará corretamente.
+  - Porém, imagine que tenho uma função de outro objeto que recebe uma callback como segundo argumento e eu utilizo a função do primeiro obejto
+  como a callback, o this não funcionará corretamentre pois o contexto em que está sendo executada é para a função do segundo objeto.
+  - Para resolver isso, usamos o .bind na chamada da função do primeiro objeto informando qual é o objeto que o JS tem que usar como contexto.
+
+  - Pode ser que tenha ficado confuso, mas veja o exemplo no this.js
+
+--- call ---
+- Serve para substituir uma função quando ela é chamada
+- Ao chamar uma função de um objeto, e esse função chama outra, eu posso usar o call para ficar ouvindo quando essa segunda função for chamada
+e substituir seu comportamento
+
+- Veja o call.js
+
+--- apply --- 
+- Faz a mesma coisa do que o call porém recebe os argumentos da função como um array

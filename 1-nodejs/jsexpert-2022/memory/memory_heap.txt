@@ -1,0 +1,1 @@
+-É a pilha onde são armazenados os endereços de memória que podem ser apontados pelo call stack para trabalhar funções, objetos e etc

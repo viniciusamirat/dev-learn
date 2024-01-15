@@ -1,0 +1,4 @@
+- No JS todos os objetos literias (objetos, arrays, functios) possuem o atributo __proto__
+- Dentro desse atributo, temos mais um __proto__, que vai herdar os atributos do objeto que foi herdado
+
+- O __proto__ de Object.prototype é null e isso serve para todos os tipos de objetos literais

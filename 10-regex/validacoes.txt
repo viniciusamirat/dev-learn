@@ -1,0 +1,2 @@
+- Validar se um determinado texto, por exemplo:
+  - Validar se uma determinada sequencia de caracteres atende a um padrão estabelecido

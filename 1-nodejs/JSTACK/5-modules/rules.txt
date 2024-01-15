@@ -1,0 +1,10 @@
+- São conjuntos de código.
+
+- Existem 3 tipos de módulos:
+  - Dentro do node, todos os arquilos JavaScript são modulos
+  - Nativos: que já vem no node
+  - Os que vem do NPM: módulos externos
+
+- CommonJS
+  - Para importar um módulo: require('nomedomodulo')
+  - Para exportar um módulo: module.exports = nomedafuncao || {funcao1, funcao2}

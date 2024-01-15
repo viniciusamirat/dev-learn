@@ -1,0 +1,7 @@
+post https://api.themoviedb.org/3/movie/popular?api_key=cc0284c12652410534da6262e1fdcfe1&language=en-US&page=1
+###
+
+post https://api.themoviedb.org/3/movie/{640146}/watch/providers?api_key=cc0284c12652410534da6262e1fdcfe1
+###
+
+post https://api.themoviedb.org/3/movie/latest?api_key=cc0284c12652410534da6262e1fdcfe1&language=en-US

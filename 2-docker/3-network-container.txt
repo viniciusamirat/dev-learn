@@ -1,0 +1,22 @@
+-- É utilizado para isolar containers
+  Um container que está em uma rede não consegue se comunicar com um container que está em outra
+  Por padrão, todo container criado fica na rede bridge
+  Um container pode estar em mais de uma rede ao mesmo tempo
+
+-- Listar as redes do docker
+docker network ls
+
+-- Criar uma rede
+docker network create rede-teste
+
+-- Conectar um container em uma rede
+docker network connect rede-teste container-teste
+
+-- Inspecionar um container
+docker inspect container-teste
+
+-- Desconectar um container de uma rede
+docker network disconnect rede-teste container-teste
+
+-- Criar um container já na rede que eu quero
+docker run --name teste-node --network=rede-teste -it -p 3030:3030 node

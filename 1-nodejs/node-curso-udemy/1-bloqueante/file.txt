@@ -1,0 +1,1 @@
+teste de node topzera pra testar a função não bloqueante

@@ -1,0 +1,10 @@
+rodar
+npm init -y
+
+depois 
+npm install express-generator
+
+ai roda
+npx express-generator nomedoapp view=pug
+
+ai dps segue o que aparecer no terminal

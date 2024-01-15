@@ -1,0 +1,2 @@
+- Busca de padrões, por exemplo:
+  - Buscar todos os termos de um texto que tenham formato de data dd/mm/yyyy

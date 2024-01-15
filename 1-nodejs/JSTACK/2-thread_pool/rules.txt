@@ -1,0 +1,8 @@
+- Responsável pela execução de código assincrono
+- Exemplo:
+  - Rodei uma função que busca dados do banco
+  - Essa função é colocada na call stack
+  - O call stack move esse processo para a thread pool, assim liberando a call stack para novas funções
+  - O thread pool vai prosseguir com a execução da função e quando acabar vai mandar uma callback para o callback queue
+  - Entre o call stack e o callback queue, fica rodando o event loop, que sempre verifica se existe uma callback que pode ser passada para a call stack
+  - A callback só sai da callback queue para a call stack quando a call stack estiver livre

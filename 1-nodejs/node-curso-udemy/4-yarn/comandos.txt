@@ -1,0 +1,8 @@
+yarn add express
+yarn add global express
+
+yarn add --dev nodemon
+
+yarn install         --Le o arquivo package.json e instala todas as dependências
+
+yarn init            --Cria o arquivo package.json

@@ -1,0 +1,10 @@
+- db.clients.insertOne({name: "vini"})
+  - Caso a collection clients não exista, ele já cria
+  - É inserido um novo documento na collection
+  - Insere apenas um docuemnto por vez
+
+- db.clients.insertMany([
+  {},
+  {}
+])
+  - Faz a inserção de vários documentos

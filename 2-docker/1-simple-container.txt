@@ -1,0 +1,39 @@
+-- Containers rodando
+docker ps
+
+-- Todos os containers
+docker ps -a
+
+-- Todas as imagens
+docker images
+
+-- Baixar uma imagem
+docker pull node
+
+docker run --name meu_container -e MYSQL_ROOT_PASSWORD=root mysql:5.7
+  (-e = serão passados parâmetros)
+  (Aqui ele já baixa a imagem caso ela não exista e já sobe o container)
+
+docker run -it node
+  (-it = modo interativo com o terminal)
+
+docker run --name some-postgres -e POSTGRES_PASSWORD=123 -p 3000:5432 -d postgres
+  (-p = Primeiro minha posta local e segundo a porta do container)
+  (-d = sem modo interativo com o terminal, ou seja, roda em segundo plano sem travar o uso do terminal)
+
+docker exec -it db-container bash
+  (permite executar comandos dentro do container)
+
+docker restart meu_container
+
+docker start meu_container
+
+docker stop meu_container
+
+docker logs meu_container
+
+-- Apagar Container
+docker rm meu_container
+
+-- Apagar imagem
+docker rmi node

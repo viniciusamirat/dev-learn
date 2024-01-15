@@ -1,0 +1,4 @@
+- É um padrão de criação de APIs que utilizam o protocolo http
+- Todos os endpoints devem ser no plural, por exemplo:
+  - Pegar todos os produtos /products/
+  - Pegar um produto /products/10

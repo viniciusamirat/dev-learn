@@ -1,0 +1,20 @@
+- O JS faz vários tipos de conversão, porém no final tudo vira string, boolean ou number
+
+- Coerção explícita: A conversão que nós fazemos propositalmente
+  - parseInt()
+  - parseFloat()
+  - String()
+  - toString()
+
+- Coerção implícita: A conversão que é feita prlo próprio JS
+  - Ex: 1 + '1' = 11
+  - Ex: 1 - '1' = 0
+  - Ex: (1 == '1') = true
+  - Ex: (true == 1) = true
+  - Ex: (true == '1') = true
+  - Ex: (0 == '') = true
+  - Ex: (null == undefined) = true
+
+  - OBS: o NaN nunca será igual a ninguém, nem a ele mesmo, mesmo com == ou ===
+
+  - Essas converções implícitas podem gerar diversos erros, então deve-se usar o ===

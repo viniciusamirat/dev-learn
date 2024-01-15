@@ -1,0 +1,5 @@
+- Variáveis de tipos primitivos quando atribuídas para outra variável, seu valor é copiado, onde ambas se tornam independentes
+
+- Variaveis que não são tipos primitivos (objetos, funções, arrays, etc) quando atribuídas para outro variável, seu valor não é copiado.
+A variável destino irá receber apenas o endereço de memória da variável origem, assim qualquer alteração na segunda variável afetará a primeira.
+

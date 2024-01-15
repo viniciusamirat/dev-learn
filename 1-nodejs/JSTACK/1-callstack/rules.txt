@@ -1,0 +1,2 @@
+- É uma pilha
+- Todas as funções que são executadas vão para essa pilha

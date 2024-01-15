@@ -1,0 +1,10 @@
+- db.clients.createIndex({name: 1})
+  - Informo qual o campo será o index e passo o número 1 como valor para confirmar a criação
+
+- db.clients.getIndexes()
+  - Mostra todos os indexes da collection 
+
+- db.clients.dropIndex("name_1")
+  - Deletar um index
+  - O nome do index desejado pode ser consultado no comando anterior
+

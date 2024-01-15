@@ -1,0 +1,17 @@
+- use nomedobanco
+  - O mongo irá "criar" automaticamente esse banco caso não exista
+  - Esse banco só será criado de fato quando algo for inserido nele
+
+- A partir disso, é só realizar todos os comandos com db.algumacoisa, no qual o db sempre faz referência ao banco em uso
+
+- show dbs
+  - Mostra todos os bancos
+
+- show collections
+  - Mostra todas as collections do banco em uso
+
+- db.clients.drop()
+  - deleta a collection clients
+
+- db.dropDatabase()
+  - Deleta o banco em uso

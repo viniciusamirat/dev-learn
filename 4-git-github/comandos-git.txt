@@ -1,0 +1,73 @@
+git config --global user.name "vinicius"
+git config --global user.email "vinicius@gmail.com"
+git config --list
+
+git add .
+git add arquivo.txt                                      //além da utilização comum de adicionar somente umaquivo para a stage área, esse comando pode adicionar o status de um arquivo que está como deletado para a stage area (quando aparece deleted: arquivo.txt !!! sempre é ideal mandar um commit de deleção somente com a deleção na stage area, sem outros arquivos!!!
+
+
+git commit -m "mensagem"
+git commit --amend -m "mensagem alterada"                //alterando a mensagem do último commit alem de adicionar as novas modificações que estiverem na stage area
+git commit --amend                                       //faz a mesma coisa do de cima só que sem alterar a mensagem
+
+
+git log                                                  //mostra o histórioco de alterações
+git log --oneline                                        //resumido
+git log -n 5                                             //ultimos 5 commits
+git log --since=2023-10-01                               //commits a partir desta data
+git log --until=2023-10-01                               //commits antes desta data
+git log --author=vinicius                                //commits do autor
+git log --grep="mensagem"                                //commits que contém "mensagem" na mensagem
+
+
+git diff                                                 //mostra as modificações que foram realizadas nos arquivos (mostra somente o que está no working directory
+git diff --staged                                        //mesma coisa do de cima só que mostras dos arquivos que estão na stage area
+git diff --staged .                                      //todos
+
+
+git show edcdf19                                         //mostra todas as alterações que foram feitas naquele ponto da história
+git show edcdf19 -- src/control/arquivo.txt              //mostra as alterações só deste arquivo
+git show edcdf19 --color-words                           //mostras exatamente quais palavras foram alteradas, isso também funciona no git diff
+
+
+git restore arquivo.txt                                  //descarta as alterações do arquivo da working directory, perde tudo que foi feito
+git restore --staged arquivo.txt                         //tira o arquivo da stage área
+
+
+git rm arquivo.txt                                       //apaga o arquivo da pasta do projeto, com esse o arquivo é deletado completamente e não vai para a lixeira, seu status de deletado já vai direto para a stage area
+
+
+git mv arquivo.txt 2-arquivo.txt                         //renomeando o arquivo, já vai para a stage area
+git mv arquivo.txt pasta/arquivo.txt                     //movendo o arquivo
+
+
+//usar este somente quando o git status não tiver nada
+git checkout edcdf19 -- arquivo.txt                      //pega o arquivo deste ponto da história e trás para a stage area
+
+
+git clean -n                                             //mostra quais arquivos não monitorados ele vai remover permanntemente
+git clean -f                                             //remove permanentemente os arquivos não monitorados
+
+
+//usar este somente quando o git status não tiver nada
+git revert HEAD~5                                        //volta 5 commits na história já criando um novo commit
+git revert f44db3                                        //só informando a hash
+
+
+git checkout -b nomedabranch     //cria uma nova branch
+git checkout nomedabranch        //muda para a branch
+
+
+git merge nomedabranch           //vai pegar tudo que tem na brach nomedabranch e juntar com a branch atual
+
+
+git branch -a                    mostra todas as branchs que existem no meu projeto
+git branch -D nomedabranch       //apagar uma branch
+git push origin --delete nomedabranch    //apaga a branch no github também
+
+
+git fetch         //atualiza todas as branchs que existem no github e não no seu computador
+
+
+----- LEMBRE-SE DE COLOCAR REGRAS NA BRANCH MAIN NO GITHUB, PARA QUE NINGUÉM FAÇA PUSH NELA SEM QUERER------
+

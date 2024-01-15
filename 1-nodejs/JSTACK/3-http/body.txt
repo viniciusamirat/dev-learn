@@ -1,0 +1,4 @@
+- Só deve ser usado no POST ou PUT
+- Normalmente é passado como application/json
+- Quando queremos trabalhar com transferência de arquivos usamos como Multipart/form-data
+  - Também é composta com chave e valor

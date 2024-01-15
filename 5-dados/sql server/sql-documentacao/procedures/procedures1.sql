@@ -1,0 +1,14 @@
+USE CURSO;
+GO
+
+CREATE PROCEDURE PROC_OLA
+AS 
+BEGIN
+    SELECT 'O famoso Hello World!';
+END
+
+
+--executando a procedure
+EXEC PROC_OLA;
+--OU
+EXECUTE PROC_OLA;

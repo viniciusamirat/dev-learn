@@ -1,0 +1,32 @@
+git flow init
+
+--criado uma nova feature (vai criar a branch feature/nomedabranch
+git flow feature start nomedabranch
+
+--faz todas as alterações que devem ser feitas
+
+--caso esteja trabalhando sozinho e ninguém precisa ver essa branch (a branch é mergeada com a develop e apagada)
+git flow feature finish nomedabranch
+
+--caso seja colaborativo (faz o push dessa branch para o github)
+git flow feature publish nomedabranch
+
+--quando alguém der o finish, a branch é excluída da máquina da pessoa e do github
+
+--criando uma nova release 
+git flow release start 1.0.0
+
+--finalizando essa release (atualiza a main e a develop) (nesse momento é aberto um arquivo no vscode para ser escrita a TAG dessa versão, ex: "finish version", depois é só fechar o arquivo)
+git flow release finish -m "Sua mensagem aqui" '1.0.0'
+
+se dar o comando git tag, ele mostrará a versão do sistema com base na tag criada
+
+--caso tenha algum bug que tem que ser resolvido rápido
+--na main, seguir o caminho
+git flow hotfix start 1.0.1
+
+--rola a mesma coisa que na release, e a main e a develop são atualizadas
+git flow hotfix finish 1.0.1
+
+git push --all
+

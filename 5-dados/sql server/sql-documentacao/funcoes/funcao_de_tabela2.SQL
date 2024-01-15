@@ -1,0 +1,12 @@
+USE CURSO;
+GO
+
+CREATE FUNCTION FN_CIDADES(@UF VARCHAR(2))
+    RETURNS TABLE
+    AS
+    RETURN(
+        SELECT a.nome_mun, a.populacao FROM SENSO a
+        WHERE a.uf = @UF;
+    )
+
+SELECT * FROM DBO.FN_CIDADES('SP');

@@ -1,0 +1,19 @@
+###
+GET http://127.0.0.1:3000/adm
+###
+get http://127.0.0.1:3000/adm/250
+###
+post http://127.0.0.1:3000/adm
+Content-Type: application/json
+
+{
+    "login": "vini",
+    "senha": "123"
+}
+###
+patch http://127.0.0.1:3000/adm/250
+###
+put http://127.0.0.1:3000/adm/250
+###
+delete http://127.0.0.1:3000/adm/250
+###

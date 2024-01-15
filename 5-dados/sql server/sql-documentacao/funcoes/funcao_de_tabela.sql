@@ -1,0 +1,22 @@
+USE CURSO;
+GO
+
+CREATE FUNCTION DBO.FUNC_DIAS(@DIAS INT, @DTI DATETIME, @DTF DATETIME)
+    RETURNS @TB1 TABLE (SEQ INT, DT DATETIME)
+    AS
+    BEGIN
+        DECLARE @COUNT;
+        SET @COUNT = 1;
+
+        WHILE @DTI <= @DTF
+            BEGIN
+                INSERT INTO @TB1 VALUES (@COUNT, @DTI);
+                SET @DTI = DATEADD(DAY, @DIAS, @DTI);
+                SET @COUNT = @COUNT + 1;
+            END
+            RETURN
+    END
+
+
+SELECT * FROM DBO.FUNC_DIAS(1, GETDATE(), GETDATE() + 12);
+

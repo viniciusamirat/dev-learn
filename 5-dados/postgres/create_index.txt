@@ -1,0 +1,5 @@
+create unique index concurrently users_code on kc_security.users(code);
+
+alter table kc_security.users add constraint unique_code unique using index users_code;
+
+create index users_user_code on public.calendars(user_code);

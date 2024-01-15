@@ -1,0 +1,5 @@
+- quando a gente usa o git add nós mandamos os arquivos para a STAGE AREA
+
+- o git commit coloca o arquivo para o LOCAL REPOSITORY
+
+- o hash (SHA-1) é atribuído para cada commit

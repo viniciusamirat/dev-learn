@@ -1,0 +1,24 @@
+-- Os exemplos são feitos com o find, mas funcionam em qualquer query que precise de um filtro
+
+- db.clients.find({age: {$gt: 30}})
+  - Busco todos os documentos que possuam o campo age maior que 30
+  - gt = bigger then
+
+- db.clients.find({age: {$gte: 30}})
+  - Busco todos os documentos que possuam o campo age maior ou igual a 30
+  - gte = bigger then or equal
+  
+- db.clients.find({age: {$lt: 30}})
+  - Busco todos os documentos que possuam o campo age menor que 30
+  - lt = less than
+
+- db.clients.find({age: {$lte: 30}})
+  - Busco todos os documentos que possuam o campo age menor ou igual a 30
+  - lte = less than or equal
+
+---- Operadores expecíficos do update -----
+
+- db.clients.updateOne({name: "vini"}, {$inc: {salary: 1000}})
+  - Operador de incremento
+  - O salários do cliente encontrado passa a ter 1000 a mais
+  - Se eu passar o valor negativo ele faz o decremento

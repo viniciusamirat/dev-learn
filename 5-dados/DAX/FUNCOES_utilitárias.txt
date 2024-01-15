@@ -1,0 +1,1 @@
+RELATED(DADO) retorna um dados relacionado com outra tabela, tem que fazer os relacionamentos

@@ -1,0 +1,19 @@
+- Todo objeto possui alguns métodos por padrão, como:
+  - toString()
+  - isProtoTypeOf()
+  - valueOf()
+
+- Ao converter um objeto para uma string o JS segue uma sequência:
+  - Primeiro verifica se já é uma string, se sim ele já retorna 
+  - Depois chama o toString() e se o resultado for uma String, ele já retorna
+  - Por último ele chama a função valueOf() e retorna o tipo
+
+  - Caso nenhuma função retorne algo, será estourado um erro de tipo
+
+- Ao converter um tipo numerico a sequência muda um pouco, chamando o valueOf primeiro
+
+--- Exemplos no demo01.js ---
+
+- No ES6 foi implementada uma nova coerção que substitui as acima: Symbol.toPrimitive
+  
+--- Exemplos no demo02.js ---

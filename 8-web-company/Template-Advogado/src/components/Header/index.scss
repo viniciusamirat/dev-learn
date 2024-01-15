@@ -1,0 +1,102 @@
+@import "../../";
+
+.Header {
+  display: flex;
+  background-color: $LightCyan;
+
+  header {
+    @include DivFlex;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+
+    h2 {
+      margin-right: auto;
+      color: $White;
+      font-size: 34px;
+      font-weight: 800;
+    }
+
+    .btnMobile {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      a {
+        color: $White;
+        font-size: 16px;
+        font-weight: 400;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          color: $Gray;
+        }
+
+        &.active {
+          color: $White;
+          font-weight: 700;
+        }
+      }
+
+      .social-network {
+        display: flex;
+        gap: 15px;
+        margin-left: 30px;
+
+        img {
+          width: 25px;
+          filter: invert(1);
+          transition: 0.2s;
+
+          &:hover {
+            filter: invert(0.15);
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .Header {
+    header {
+      .btnMobile {
+        display: flex;
+        margin-left: auto;
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 0;
+        font-size: 28px;
+        color: $White;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 45px;
+        width: 75vw;
+        height: 100vh;
+        padding: 30px;
+        background-color: $Cyan;
+        transform: translateX(75vw);
+        transition: 0.4s;
+
+        &.active {
+          transform: translateX(0);
+        }
+
+        .social-network {
+          margin: auto 0 0 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+import numpy as np
+
+arr = np.array([
+    [
+        [1,2,3,4, 7],
+        [1,2,3,4,5],
+        [5,6,7,8,9]
+    ],
+    [
+        [1,2,3,4,5],
+        [6,7,8,9,0],
+        [9,8,7,6,5]
+    ]
+])
+
+print(arr)
+
+print(f'numero dimenções {arr.ndim}')
+
+print(f'qual as dimenções? {arr.shape}')

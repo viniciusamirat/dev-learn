@@ -1,0 +1,7 @@
+#Arquivos e pastas que devem ser ignorados
+
+node_modules/
+20-exp/hcodeapp
+
+*.zip
+*.rar

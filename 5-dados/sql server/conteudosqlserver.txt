@@ -1,0 +1,145 @@
+COMANDOS APRENDIDOS:
+
+select distinct person.person.LastName 
+from person.person;
+(seleciona todos os registros desse campo, porém, não repete os que estão duplicados)
+-----------------------
+select * 
+from Person.person a 
+where a.FirstName = 'Peter' and a.LastName = 'Krebs'
+
+select * 
+from Person.EmailAddress a
+where a.BusinessEntityID = 26
+----------------------------------------------------
+select count(*) /*mostra quantos registros existem no total da tabela*/
+from person.person
+
+select count(distinct firstname) /*mostra quantos registros existem com esse campo sem repetir e não nulos*/
+from person.person
+
+select count(firstname) /*mostra quantos registros existem com esse campo não nulos*/
+from person.person
+-------------------------------------------
+select top 10 *
+from person.person
+/*limita para 10 registros que retornarão do select, evitando travar*/
+--------------------------------------------
+select coluna1, coluna2
+from tabela
+order by coluna 1 asc/desc 
+/*vai ordenar na ordem crescente ou decrescente com base em alguma coluna, no caso a 1*/
+/*pode fazer assim também*/
+select firstname,lastname
+from person.person
+order by firstname asc, lastname desc
+--------------------------------------------------
+select top 10 ProductID
+from production.Product a
+order by a.ListPrice desc
+
+select top 4 name, ProductNumber
+from production.Product a
+order by a.ProductID asc
+------------------------------------------------------
+
+select *
+from Production.Product a
+where a.ListPrice between 1000 and 1500;
+
+select *
+from Production.product a
+where a.ListPrice not between 1000 and 1500;
+
+select * 
+from HumanResources.Employee a
+where a.HireDate between '2009/01/01' and '2010/01/01'
+order by a.HireDate;
+---------------------------------------------------------
+
+select *
+from Production.Product a
+where a.Color in ('blue', 'red');
+/*sera a mesma coisa de:
+select *
+from Production.Product a
+where a.color = 'blue' 
+or a.color = 'red';*/
+
+select *
+from Production.Product a
+where a.Color not in ('blue', 'red');
+---------------------------------------------------------
+
+select *
+from Production.product a
+where a.color like '%ue';
+
+select *
+from Production.product a
+where a.color like 'blu%';
+
+select *
+from Production.product a
+where a.color like '%lu%';
+/*Aprendeu com o Barretinha em*/
+
+select *
+from Production.product a
+where a.color like '%lu_';
+/*a diferença desse é que o _ substitui apenas uma letra*/
+
+/*NO SQL SERVER O LIKE NÃO É CASE SENSITIVE*/
+----------------------------------------------------------
+select top 10 sum(a.LineTotal) as soma
+from sales.SalesOrderDetail a
+
+select top 10 min(a.LineTotal) as minimo
+from sales.SalesOrderDetail a
+
+select top 10 max(a.LineTotal) as maximo
+from sales.SalesOrderDetail a
+
+select top 10 avg(a.LineTotal) as media
+from sales.SalesOrderDetail a
+-----------------------------------------------------------
+select *
+from sales.SalesOrderDetail
+
+select a.SpecialOfferID, sum(a.UnitPrice) as soma
+from sales.SalesOrderDetail a
+group by a.SpecialOfferID
+/*soma o unitPrice de cada SpecialOfferId, ex: 
+soma o o unitPrice de todos SpecialOfferId = a 9 em uma linha;
+soma o o unitPrice de todos SpecialOfferId = a 7 em outra linha...
+assim sem misturar a soma de unitPrice de specialofferId diferentes
+
+se não entender roda uma query assum que já vai entender*/
+
+/*QUERO SABER QUANTO (em dinheiro) DE CADA PRODUTO FOI VENDIDO ATÉ HOJE*/
+
+SELECT a.ProductID, sum(a.LineTotal)
+FROM Sales.SalesOrderDetail a
+group by a.ProductID
+
+/*QUERO SABER QUANTO (em quantidade) DE CADA PRODUTO FOI VENDIDO ATÉ HOJE*/
+
+select a.ProductID, count(a.ProductID) as contagem
+from Sales.SalesOrderDetail a
+group by a.ProductID
+
+/*QUERO SABER QUANTOS NOMES DE CADA NOME TEMOS EM NOSSO DATABASE*/
+
+select a.FirstName, count(a.FirstName) as contagemNames
+from person.person a
+group by a.FirstName 
+order by contagemNames;
+
+/*QUERO SABER A MEDIA DE PREÇOS PARA PRODUTOS QUE SÃO PRATAS (SILVER)*/
+
+select a.Color, avg(a.ListPrice) as mediaPreco
+from Production.Product a
+where a.color = 'silver'
+group by a.color;
+--------------------------------------------------------------------------
+

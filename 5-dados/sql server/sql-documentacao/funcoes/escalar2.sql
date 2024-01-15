@@ -1,0 +1,23 @@
+USE curso;
+GO
+
+CREATE FUNCTION SOMA(INT @valor1, INT @valor2)
+    RETURNS INT
+    AS
+    BEGIN
+        DECLARE @RES INT;
+        SET @RES = @valor1 + @valor2;
+        RETURN(@RES);
+    END
+
+
+SELECT DBO.SOMA(2, 5);
+
+CREATE TABLE #TESTE_SOMA(
+    V1 INT,
+    V2 INT
+)
+
+INSERT INTO #TESTE_SOMA VALUES (1,5),(3,6),(4,8);
+
+SELECT V1, V2, DBO.SOMA(V1, V2) AS soma FROM #TESTE_SOMA;

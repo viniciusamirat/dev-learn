@@ -1,0 +1,8 @@
+- db.clients.insertOne({
+  name: "vini", -- string
+  age: 20, -- int
+  friends: [], -- array
+  beautiful: true, -- boolean
+  birthday: new Date(), -- aqui eu crio uma data com o JS e o mongo já entende que é um Date (o padrão do mongo é o ISODate)
+  others: {} --document
+})
