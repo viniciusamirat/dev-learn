@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: inline-block;
+      background-color: lightblue;
+      text-align: center;
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      font-size: 25px;
+    }
+
+    div:hover {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+    }
+
+    div > p {
+      display: none;
+    }
+
+    div:hover > p {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>pseudo classe</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quisquam qui explicabo labore ad dolore unde voluptate hic! Reprehenderit labore nam cum veritatis odio amet alias repellendus maxime, natus eaque!</p>
+  <div id="d1">01</div>
+  <div id="d2">02</div>
+  <div id="d3">03</div>
+  <div>
+    <p>parágrafo dentro de uma div</p>
+  </div>
+</body>
+</html>

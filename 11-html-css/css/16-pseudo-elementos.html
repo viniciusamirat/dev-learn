@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: red;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    a::after {
+      content: ' [link]';
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Pseudo elementos</h1>
+  <ul>
+    <li><a href="https://github.com/viniciusamirat">Meu repositório</a></li>
+    <li><a href="#">Meu linkedin</a></li>
+    <li><a href="#">Meu instagram</a></li>
+  </ul>
+</body>
+</html>
