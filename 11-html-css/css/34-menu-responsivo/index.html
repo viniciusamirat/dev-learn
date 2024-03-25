@@ -15,7 +15,7 @@
       </div>
       <div class="box-menu">
         <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
-        <menu>
+        <menu id="menu">
           <ul>
             <li id="item"><a href="#">Opção 1</a></li>
             <li id="item"><a href="#">Opção 2</a></li>
@@ -38,7 +38,12 @@
   </footer>
   <script>
     function clickMenu() {
-      item.style.display = 'block'
+      if (menu.style.display == 'block') {
+        menu.style.display = 'none'
+      } else {
+        menu.style.display = 'block'
+      }
+      
     }
   </script>
 </body>

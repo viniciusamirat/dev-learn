@@ -86,8 +86,12 @@
     align-items: center;
   }
 
-  menu li {
+  menu {
     display: none;
+  }
+
+  menu li {
+    display: block;
   }
 
   #burger {
